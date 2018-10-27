@@ -1,0 +1,39 @@
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span>
+            <i class="fa fa-bars"></i>
+        </span>
+        <span class="navbar-brand">{{currentRoute}}</span>
+    </nav>
+</div>
+<div class="d-flex flex-column">
+    <div class="container order-1">
+        <router-outlet></router-outlet>
+    </div>
+    
+    <!-- tabs footer -->
+    <div class="container order-2">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a
+                class="flex-sm-fill text-sm-center nav-link active"
+                routerLink="/home"
+            >
+                Active
+            </a>
+            <a
+                class="flex-sm-fill text-sm-center nav-link"
+                routerLink="/map"
+            >
+                <i class="fa fa-map"></i>
+            </a>
+            <a
+                class="flex-sm-fill text-sm-center nav-link"
+                routerLink="/chat"
+            >
+            Chat
+            </a>
+        </nav>
+    </div>
+</div>
+

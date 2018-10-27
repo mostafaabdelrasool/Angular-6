@@ -1,0 +1,22 @@
+<div class="row chat-container">
+    <div
+        *ngFor="let item of messages"
+        class="col-md-9"
+        [ngClass]="{'offset-md-3': appService.user.id===item.createdByUserId}"
+    >
+        <app-message [message]="item"></app-message>
+    </div>
+    <div class="messageInput">
+        <input
+            class="form-control"
+            name="message"
+            #message
+        >
+        <button
+            class="btn btn-primary"
+            (click)="sendMessage(message);"
+        >
+            Send
+        </button>
+    </div>
+</div>
