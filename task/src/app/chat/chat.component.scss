@@ -1,5 +1,10 @@
 
 .chat-container{ 
     height:90vh ;
-   
+    .over-scroll{
+        overflow-y: scroll;
+    }
+    .chat-message{
+        margin-bottom: 5px;
+    }
 }

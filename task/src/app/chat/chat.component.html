@@ -1,12 +1,14 @@
-<div class="row chat-container">
-    <div
-        *ngFor="let item of messages"
-        class="col-md-9"
-        [ngClass]="{'offset-md-3': appService.user.id===item.createdByUserId}"
-    >
-        <app-message [message]="item"></app-message>
+<div class="row chat-container flex-column justify-content-between flex-nowrap">
+    <div class="d-flex order-1 flex-column align-self-stretch over-scroll h-100">
+        <div
+            *ngFor="let item of messages"
+            [ngClass]="{'offset-md-3': appService.user.id===item.createdByUserId}"
+        class="chat-message">
+            <app-message [message]="item"></app-message>
+        </div>
     </div>
-    <div class="messageInput">
+
+    <div class="messageInput d-flex order-2 align-self-stretch">
         <input
             class="form-control"
             name="message"
